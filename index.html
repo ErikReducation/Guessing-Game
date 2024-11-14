@@ -18,8 +18,36 @@
 	}
 	</style>
 	-->
+
+	
 	
 </head>
+	<script>
+  	const targetNum = Math.floor(Math.random() * 10) +1;
+ 	// document.getElementById("demo").innerHTML = randomNumber;
+  
+	
+	let latestGuess = prompt('Guess a number between 1 and 10.');//initialize variables
+	let tries =0;
+	while (latestGuess != targetNum) {//enter loop
+	if (latestGuess > targetNum) {
+		prompt('Guess was too high, guess again.);
+		tries++;
+		
+	} else if (latestGuess < targetNum) {
+		prompt('Guess was too low, guess again.);
+		tries++;
+	} else {
+		prompt('Nice try! You have to guess a number.');
+		tries++;
+	}
+	}
+	if (tries >0) {//if entered loop
+		alert(`You guessed it in ${tries} guesses.`);
+	} else {//if skipped loop
+		alert('Wow! You guessed it right on your first try!');
+	}
+	</script>
 <body>
 </body>
 </html>
