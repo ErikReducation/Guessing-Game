@@ -34,7 +34,11 @@
 	let latestGuess = prompt('Guess a number between 1 and 10.');//initialize variables
 	let tries =0;
 	while (latestGuess != targetNum) {//enter loop
-	if (latestGuess > targetNum) {
+	if (latestGuess === null) {
+		latestGuess = prompt('Nice try! You have to guess a number.');
+		tries++;
+	}
+	else if (latestGuess > targetNum) {
 		latestGuess = prompt('Guess was too high, guess again.');
 		tries++;
 		
